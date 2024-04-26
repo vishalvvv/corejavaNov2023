@@ -1,0 +1,34 @@
+package mt;
+
+class MyThread extends Thread{
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("Run method called");
+		System.out.println("Currently executing thread:"+Thread.currentThread().getName());
+		System.out.println("Prority:"+Thread.currentThread().getPriority());
+		System.out.println("state in Run method:"+Thread.currentThread().getState());
+	}
+}
+
+public class ThreadMethods {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyThread mt1 = new MyThread();
+		mt1.setName("First Thread");
+		mt1.setPriority(1);
+		System.out.println("before start:"+mt1.getState());
+		mt1.start();
+		System.out.println("after start:"+mt1.getState());
+
+		MyThread mt2 = new MyThread();
+		mt2.setName("First Thread");
+		mt2.setPriority(6);
+		System.out.println("before start:"+mt2.getState());
+		mt2.start();
+		System.out.println("after start:"+mt2.getState());
+
+	}
+
+}

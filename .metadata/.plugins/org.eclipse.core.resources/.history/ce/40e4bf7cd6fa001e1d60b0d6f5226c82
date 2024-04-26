@@ -1,0 +1,148 @@
+package collection;
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+class Employee{
+	String name;
+	String project;
+	String isOnBench;
+	int yearsOfExperience;
+	public Employee(String name, String project, String isOnBench, int yearsOfExperience) {
+		super();
+		this.name = name;
+		this.project = project;
+		this.isOnBench = isOnBench;
+		this.yearsOfExperience = yearsOfExperience;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.name+"\t"+this.project+"\t"+this.isOnBench+"\t"+this.yearsOfExperience;
+	}
+	
+}
+
+public class EmployeesMapDemo {
+ 
+	static HashMap<Integer,Employee> hm = new HashMap<Integer,Employee>();
+	static int counter = 0;
+	static Scanner scanner = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Employee e1 = new Employee("helena","CRM","no",4);
+    Employee e2 = new Employee("selena","---","yes",7);
+    Employee e3 = new Employee("shakira","----","yes",2);
+    Employee e4 = new Employee("sindhu","TRMS","no",3);
+    Employee e5 = new Employee("camila","ROC","no",5);
+    
+    addEmployee(e1);
+    addEmployee(e2);
+    addEmployee(e3);
+    addEmployee(e4);
+    addEmployee(e5);
+    
+    listEmployees();
+    deleteEmployee(2);
+    System.out.println("--------------------------------------------");
+    listEmployees();
+    
+    e3.project="ar";
+    e3.isOnBench="no";
+    updateEmployee(3,e3);
+    
+    System.out.println("-----------------------------------------------");
+    
+    listEmployees();
+      		
+	
+
+	
+	 boolean exit = false;
+
+     while (!exit) {
+         System.out.println("\nChoose an option:");
+         System.out.println("1. Add Employee");
+         System.out.println("2. Remove Employee");
+         System.out.println("3. Update Employee");
+         System.out.println("4. List All Employees");
+         System.out.println("5. Exit");
+         int option = scanner.nextInt();
+
+         switch (option) {
+             case 1:
+                 addEmployeeFromInput();
+                 break;
+             case 2:
+                 System.out.println("Enter the ID of the employee to remove:");
+                 int idToRemove = scanner.nextInt();
+                 deleteEmployee(idToRemove);
+                 break;
+             case 3:
+                 System.out.println("Enter the ID of the employee to update:");
+                 int idToUpdate = scanner.nextInt();
+                 updateEmployeeFromInput(idToUpdate);
+                 break;
+             case 4:
+                 listEmployees();
+                 break;
+             case 5:
+                 exit = true;
+                 break;
+             default:
+                 System.out.println("Invalid option. Please try again.");
+         }
+     }
+     scanner.close();
+	}
+ 
+
+	static void addEmployee(Employee employee) {
+		hm.put(++counter,employee);
+	}
+	static void listEmployees() {
+		Set set =hm.entrySet();
+		Iterator it =set.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
+		}
+	static void deleteEmployee(int key) {
+		hm.remove(key);
+	}
+	static void updateEmployee(int key,Employee employee) {
+		hm.put(key,employee);
+	}
+	static void addEmployeeFromInput() {
+        System.out.println("Enter employee name:");
+        String name = scanner.next();
+        System.out.println("Enter employee project:");
+        String project = scanner.next();
+        System.out.println("Is the employee on bench? (yes/no):");
+        String isOnBench = scanner.next();
+        System.out.println("Enter employee years of experience:");
+        int yearsOfExperience = scanner.nextInt();
+        Employee newEmployee = new Employee(name, project, isOnBench, yearsOfExperience);
+        addEmployee(newEmployee);
+    }
+
+	 static void updateEmployeeFromInput(int key) {
+	        System.out.println("Enter new employee details:");
+	        System.out.println("Enter employee name:");
+	        String name;
+			 name = scanner.next();
+	        System.out.println("Enter employee project:");
+	        String project = scanner.next();
+	        System.out.println("Is the employee on bench? (yes/no):");
+	        String isOnBench = scanner.next();
+	        System.out.println("Enter employee years of experience:");
+	        int yearsOfExperience = scanner.nextInt();
+	        Employee updatedEmployee = new Employee(name, project, isOnBench, yearsOfExperience);
+	        updateEmployee(key, updatedEmployee);
+	    }
+
+}
+

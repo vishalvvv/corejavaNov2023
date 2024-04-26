@@ -1,0 +1,19 @@
+package oop;
+
+ class CashOnDelivery{
+	 String houseNumber;
+	 String landMark;
+	 String area;
+	 String city;
+ }
+ 
+ 
+
+public class PaymentDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

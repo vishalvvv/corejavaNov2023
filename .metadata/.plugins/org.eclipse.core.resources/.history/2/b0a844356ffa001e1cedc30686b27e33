@@ -1,0 +1,52 @@
+package collection;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+class Employee{
+	String name;
+	String project;
+	String isOnBench;
+	int yearsOfExperience;
+	public Employee(String name, String project, String isOnBench, int yearsOfExperience) {
+		super();
+		this.name = name;
+		this.project = project;
+		this.isOnBench = isOnBench;
+		this.yearsOfExperience = yearsOfExperience;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.name+"\t"+this.project+"\t"+this.isOnBench+"\t"+this.yearsOfExperience;
+	}
+	
+}
+
+public class EmployeesMapDemo {
+ 
+	static HashMap<Integer,Employee> hm = new HashMap<Integer,Employee>();
+	static int counter = 0;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Employee e1 = new Employee("helena","CRM","no",4);
+    addEmployee(e1);
+    listEmployees();
+      		
+	}
+	static void addEmployee(Employee employee) {
+		hm.put(++counter,employee);
+	}
+	static void listEmployees() {
+		Set set =hm.entrySet();
+		Iterator it =set.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
+		
+		
+	}
+
+}

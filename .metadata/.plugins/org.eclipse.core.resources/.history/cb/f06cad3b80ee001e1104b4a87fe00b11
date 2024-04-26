@@ -1,0 +1,17 @@
+package oop;
+
+class Product{
+	int pid;
+	String name;
+	int price;
+}
+
+public class ConstructorDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Product product = new Product();
+
+	}
+
+}

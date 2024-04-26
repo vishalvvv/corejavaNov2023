@@ -1,0 +1,14 @@
+package io;
+
+import java.io.FileOutputStream;
+
+public class FileOutputStreamDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		 FileOutputStream fos = new FileOutputStream("abc.txt");
+		 
+	}
+
+}

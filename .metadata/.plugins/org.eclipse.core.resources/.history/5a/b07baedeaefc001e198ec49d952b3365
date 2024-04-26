@@ -1,0 +1,39 @@
+package io;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileInputStreamOutputStreamCopy {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			FileInputStream fis = new FileInputStream("C:\\Users\\Vishal\\OneDrive\\Documents\\saikumarcorejava\\JavaIO\\abc.txt");
+			FileOutputStream fos = new FileOutputStream("C:\\\\Users\\\\Vishal\\\\OneDrive\\\\Documents\\\\saikumarcorejava\\\\JavaIO\\\\temp.txt");
+		
+			String str="im in temp file";
+				byte b[] = fis.readAllBytes();
+				for(int i=0;i<b.length;i++) {
+					System.out.print((char)b[i]);
+				}
+		
+		
+	
+		
+		fos.write(str.getBytes());
+		fos.flush();
+		fos.close();
+		
+	
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
+			
+
+	}
+
+}

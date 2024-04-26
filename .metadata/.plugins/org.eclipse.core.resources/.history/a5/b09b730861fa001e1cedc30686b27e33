@@ -1,0 +1,18 @@
+package collection;
+
+import java.util.HashMap;
+
+public class HashMapDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashMap hm = new HashMap();
+		hm.put(101,"christina");
+		hm.put(102, "sophia");
+		hm.put(103, "raquel");
+		hm.put(104, "bridgie");
+		hm.put(105, "audrey");
+
+	}
+
+}

@@ -1,0 +1,46 @@
+package collection;
+
+import java.util.ArrayList;
+
+class Client{
+	int cid;
+	String name;
+	long accountNumber;
+	long accountBalance;
+	public Client(int cid, String name, long accountNumber, long accountBalance) {
+		super();
+		this.cid = cid;
+		this.name = name;
+		this.accountNumber = accountNumber;
+		this.accountBalance = accountBalance;
+	}
+	
+	// public String toString() {
+	//	return this.cid+"\t"+this.name+"\t"+this.accountNumber+"\t"+this.accountBalance;
+	// }
+}
+public class ArrayListBanking {
+	
+	static ArrayList<Client> clients = new ArrayList<Client>();
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Client c1 = new Client(101,"alicia",10101,9000);
+		Client c2 = new Client(102,"margaret",452730,50000);
+		Client c3 = new Client(103,"dorothy",895232,800000);
+		Client c4 = new Client(104,"charlotte",8623230,10000000);
+		
+		clients.add(c1);
+		clients.add(c2);
+		clients.add(c3);
+		clients.add(c4);
+       displayClientsDetails();
+	}
+	
+	static void displayClientsDetails() {
+		System.out.println("CustomerId \t\t Name \t\t Account Number \t\t Balance");
+		System.out.println("---------------------------------------------------------------------------------------");
+	}
+
+}

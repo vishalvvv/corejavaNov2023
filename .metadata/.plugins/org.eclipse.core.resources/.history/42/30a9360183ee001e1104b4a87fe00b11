@@ -1,0 +1,26 @@
+package oop;
+
+class Customer{
+	String name;
+	String custId;
+	long accountNumber;
+	long accountBalance;
+	
+	Customer(String nameParam,String custIdParam,long accountNumberParam,long accountBalanceParam){
+		this.name=name;
+		this.custId=custId;
+		this.accountNumber=accountNumber;
+		this.accountBalance=accountBalance;
+	}
+}
+public class ParameterizedConstructorDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Customer customer = new Customer("Michelle","hdfc4568756",75546567L,99999999L);
+		System.out.println(customer.name);
+		System.out.println(customer.custId);
+
+	}
+
+}

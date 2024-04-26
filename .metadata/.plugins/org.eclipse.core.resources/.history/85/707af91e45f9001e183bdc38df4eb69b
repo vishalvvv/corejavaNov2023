@@ -1,0 +1,27 @@
+package collection;
+
+class Client{
+	String cid;
+	String name;
+	long accountNumber;
+	long accountBalance;
+	public Client(String cid, String name, long accountNumber, long accountBalance) {
+		super();
+		this.cid = cid;
+		this.name = name;
+		this.accountNumber = accountNumber;
+		this.accountBalance = accountBalance;
+	}
+	
+	public String toString() {
+		return this.cid+"\t"+this.name+"\t"+this.accountNumber+"\t"+this.accountBalance;
+	}
+}
+public class ArrayListBanking {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

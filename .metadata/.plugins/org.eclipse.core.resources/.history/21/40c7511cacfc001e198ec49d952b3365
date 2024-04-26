@@ -1,0 +1,27 @@
+package io;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class FileInputStreamOutputStreamCopy {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			FileInputStream fis = new FileInputStream("C:\\Users\\Vishal\\OneDrive\\Documents\\saikumarcorejava\\JavaIO\\abc.txt");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
+			try {
+				FileOutputStream fos = new FileOutputStream("C:\\\\Users\\\\Vishal\\\\OneDrive\\\\Documents\\\\saikumarcorejava\\\\JavaIO\\\\temp.txt");
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+	}
+
+}

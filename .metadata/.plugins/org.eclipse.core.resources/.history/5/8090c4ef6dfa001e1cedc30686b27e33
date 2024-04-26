@@ -1,0 +1,37 @@
+package collection;
+
+import java.util.HashMap;
+
+class Employee{
+	String name;
+	String project;
+	String isOnBench;
+	int yearsOfExperience;
+	public Employee(String name, String project, String isOnBench, int yearsOfExperience) {
+		super();
+		this.name = name;
+		this.project = project;
+		this.isOnBench = isOnBench;
+		this.yearsOfExperience = yearsOfExperience;
+	}
+	
+	
+	
+}
+
+public class EmployeesMapDemo {
+ 
+	static HashMap<Integer,Employee> hm = new HashMap<Integer,Employee>();
+	static int counter = 0;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Employee e1 = new Employee("helena","CRM","no",4);
+    addEmployee(e1);
+    System.out.println(hm.size());
+    		
+	}
+	static void addEmployee(Employee employee) {
+		hm.put(++counter,employee);
+	}
+
+}

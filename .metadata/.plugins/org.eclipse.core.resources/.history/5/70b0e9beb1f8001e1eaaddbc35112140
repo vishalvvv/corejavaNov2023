@@ -1,0 +1,36 @@
+package collection;
+
+import java.util.HashSet;
+import java.util.Set;
+
+class Customer{
+	int custId;
+	String name;
+	String address;
+	public Customer(int custId, String name, String address) {
+		super();
+		this.custId = custId;
+		this.name = name;
+		this.address = address;
+	}
+	
+	
+}
+
+public class CustomerDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Set set = new HashSet();
+		Customer c1 = new Customer(101,"alekya","california");
+		Customer c2 = new Customer(102,"bhagya","texas");
+		Customer c3 = new Customer(103,"simran","new york");
+		set.add(c1);
+		set.add(c2);
+		set.add(c3);
+		
+
+	}
+
+}

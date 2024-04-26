@@ -1,0 +1,32 @@
+package oop;
+
+class Calculator{
+	 public void add(int a,int b) {
+		 System.out.println(a+b);
+	 }
+	 public void sub(int a,int b) {
+		 System.out.println(a-b);
+	 }
+}
+
+class ScientificCalculator extends Calculator{
+	public void square(int a) {
+		System.out.println(a*a);
+	}
+	public void cube(int a) {
+		System.out.println(a*a*a);
+	}
+}
+
+public class SingleInheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ScientificCalculator sc = new ScientificCalculator();
+		sc.cube(3);
+		sc.add(10,20);
+		sc.sub(90, 2);
+
+	}
+
+}
